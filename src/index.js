@@ -11,16 +11,15 @@ import store from './Redux/store';
 import { BrowserRouter } from 'react-router-dom';
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
-    navigator.serviceWorker.register('/service-worker.js')
+    navigator.serviceWorker.register('/service-worker.js', { scope: '/' })
       .then(function(registration) {
-        console.log('Service worker registered successfully:', registration.scope);
+        console.log('ServiceWorker registration successful with scope: ', registration.scope);
       })
-      .catch(function(error) {
-        console.error('Service worker registration failed:', error);
+      .catch(function(err) {
+        console.log('ServiceWorker registration failed: ', err);
       });
   });
 }
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 console.warn(store)
 root.render(
