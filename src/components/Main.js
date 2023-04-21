@@ -29,19 +29,6 @@ function Main() {
       </div>
       <div className='product-container'>
         {
-          // data.map((item)=><div className='product-item'>
-          //   <div> <h5>Resturent Name : {item.name} </h5></div>
-          //   <img src={item.imgdata} alt="" />
-         
-          //   <div>
-          //     <button onClick={() => dispatch(addToCart(item))} >Add to Cart</button>
-          //     <button onClick={() => dispatch(removeToCart(item.id))}>Remove to Cart</button>
-
-          //     </div>
-          // </div>)
-
-
-
 
 
           data.map((item)=>  <Card sx={{ maxWidth: 345,justifyContent:'center',padding:'8px' }}>
